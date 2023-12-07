@@ -7,11 +7,11 @@ const Header: React.FC = () => {
         <header>
             <Link className="site-logo" to="/">LOGO PUT HERE</Link>
             <nav>
-                <NavLink
-                    to="/about"
-                >
-                    About
-                </NavLink>
+                <NavLink to="/">Main Page</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/contacts">Contact</NavLink>
+                <NavLink to="/services">Services</NavLink>
+                <NavLink to="/recenze">Recenze</NavLink>
             </nav>
         </header>
     );
