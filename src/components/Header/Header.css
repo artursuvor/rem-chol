@@ -1,3 +1,71 @@
-header{
-    background-color: blueviolet;
-}
+/* Стили для основного контейнера заголовка */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8; /* Цвет фона заголовка */
+    border-bottom: 1px solid #ddd; /* Граница снизу */
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+  
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Стили для логотипа сайта */
+  .site-logo img {
+    width: 100px; /* Задаем размер логотипа */
+    height: auto;
+  }
+  
+  /* Стили для контейнера с телефоном */
+  .telephone-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Стили для телефонного номера */
+  .telephone-container a {
+    text-decoration: none;
+    color: #333; /* Цвет текста номера телефона */
+    margin-right: 10px; /* Отступ справа */
+  }
+  
+  /* Стили для навигационного меню */
+  nav {
+    display: flex;
+  }
+  
+  /* Общие стили для навигационных ссылок */
+  nav a {
+    text-decoration: none;
+    color: #333; /* Цвет текста ссылок */
+    margin-right: 20px; /* Отступ между ссылками */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+  }
+  
+  /* Стили для активной ссылки */
+  nav a.main-active,
+  nav a.about-active,
+  nav a.contacts-active,
+  nav a.recenze-active {
+    font-weight: bold; /* Жирный текст для активной ссылки */
+  }
+  
+  /* Стили для социальной иконки VK */
+  .vk-logo img {
+    width: 30px; /* Задаем размер иконки */
+    height: auto;
+  }
+
+  #phoneImage{
+    width: 30px; /* Задаем размер иконки */
+    height: auto;   
+  }
+  
