@@ -6,26 +6,31 @@ const Header: React.FC = () => {
     const [isHeaderFixed, setIsHeaderFixed] = useState(false);
 
     useEffect(() => {
-      const handleScroll = () => {
-        const offset = window.scrollY;
-        if (offset > 100) {
-          setIsHeaderFixed(true);
-        } else {
-          setIsHeaderFixed(false);
-        }
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-  
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }, []);
+        const handleScroll = () => {
+          const offset = window.scrollY;
+          const header = document.querySelector('header');
+          if (header) {
+            if (offset > 115 && !isHeaderFixed) {
+              setIsHeaderFixed(true);
+              header.classList.remove('hidden');
+            } else if (offset <= 115 && isHeaderFixed) {
+              setIsHeaderFixed(false);
+              header.classList.add('hidden');
+            }
+          }
+        };
+      
+        window.addEventListener('scroll', handleScroll);
+      
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, [isHeaderFixed]);      
     
     const phoneImage = document.getElementById('phoneImage') as HTMLImageElement | null;
     if (phoneImage) {
         phoneImage.addEventListener('click', () => {
-            window.location.href = 'tel:+1234567890';
+            window.location.href = 'tel:+79823435703';
         });
     }
     return (
@@ -34,7 +39,7 @@ const Header: React.FC = () => {
                 <img src="./img/logo.png" alt="Logo" />
             </Link>
             <div className="telephone-container">
-                <a href="tel:+1234567890">+1 234-567-890</a>
+                <a href="tel:+79823435703">8 (982) 343-57-03</a>
                 <img src="./img/tel.png" alt="Telephone" id="phoneImage"/>
             </div>
             <nav>
@@ -43,32 +48,32 @@ const Header: React.FC = () => {
                     to="/" 
                     className={({ isActive, isPending }) =>
                         isPending ? "main" : isActive ? "main-active" : ""
-                }>
+                    }>
                     ГЛАВНАЯ СТРАНИЦА
                 </NavLink>
                 <NavLink 
-                    to="/about" 
+                    to="/обо-мне" 
                     className={({ isActive, isPending }) =>
                         isPending ? "about" : isActive ? "about-active" : ""
-                }>
+                    }>
                     ОБО МНЕ
                 </NavLink>
                 <NavLink 
-                    to="/contacts" 
+                    to="/контакты" 
                     className={({ isActive, isPending }) =>
                         isPending ? "contacts" : isActive ? "contacts-active" : ""
-                }>
+                    }>
                     КОНТАКТЫ
                 </NavLink>
                 <NavLink 
-                    to="/recenze" 
+                    to="/отзывы" 
                     className={({ isActive, isPending }) =>
                         isPending ? "contacts" : isActive ? "contacts-active" : ""
-                }>
+                    }>
                     ОТЗЫВЫ
                 </NavLink>
             </nav>
-            <Link className="vk-logo" to="https://vk.com/adultswimming" target="_blank" rel="noopener noreferrer">
+            <Link className="vk-logo" to="https://vk.com/widget_community.php?act=a_subscribe_box&oid=-219907410&state=1" target="_blank" rel="noopener noreferrer">
                 <img src="./img/vk.png" alt="Logo" />
             </Link>
         </header>

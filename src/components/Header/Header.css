@@ -1,71 +1,83 @@
-/* Стили для основного контейнера заголовка */
+/* Header.css */
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f8f8f8; /* Цвет фона заголовка */
-    border-bottom: 1px solid #ddd; /* Граница снизу */
-    box-sizing: border-box;
-    z-index: 1000;
-  }
-  
-  .fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 5px 100px 5px 100px;
+  transition: padding 0.8s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
 
-  /* Стили для логотипа сайта */
-  .site-logo img {
-    width: 100px; /* Задаем размер логотипа */
-    height: auto;
-  }
-  
-  /* Стили для контейнера с телефоном */
-  .telephone-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Стили для телефонного номера */
-  .telephone-container a {
-    text-decoration: none;
-    color: #333; /* Цвет текста номера телефона */
-    margin-right: 10px; /* Отступ справа */
-  }
-  
-  /* Стили для навигационного меню */
-  nav {
-    display: flex;
-  }
-  
-  /* Общие стили для навигационных ссылок */
-  nav a {
-    text-decoration: none;
-    color: #333; /* Цвет текста ссылок */
-    margin-right: 20px; /* Отступ между ссылками */
-    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
-  }
-  
-  /* Стили для активной ссылки */
-  nav a.main-active,
-  nav a.about-active,
-  nav a.contacts-active,
-  nav a.recenze-active {
-    font-weight: bold; /* Жирный текст для активной ссылки */
-  }
-  
-  /* Стили для социальной иконки VK */
-  .vk-logo img {
-    width: 30px; /* Задаем размер иконки */
-    height: auto;
-  }
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0px 150px 0px 150px; 
+  height: 90px;
+}
 
-  #phoneImage{
-    width: 30px; /* Задаем размер иконки */
-    height: auto;   
-  }
-  
+
+.site-logo img {
+  width: 100px;
+  height: auto;
+}
+
+.telephone-container {
+  display: flex;
+  align-items: center;
+}
+
+.telephone-container a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.telephone-container a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333; 
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover {
+  transform: scale(1.15);
+}
+
+
+nav a.main-active,
+nav a.about-active,
+nav a.contacts-active,
+nav a.recenze-active {
+  font-weight: bold;
+}
+
+.vk-logo img,
+.telephone-container img {
+  width: 40px; 
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.vk-logo img:hover,
+.telephone-container img:hover{
+  transform: scale(1.2);
+}
+

@@ -1,38 +1,32 @@
 import React, { useEffect, useState } from 'react';
 
 const Recenze: React.FC = () => {
-  const [data, setData] = useState<any>(null);
+  const [posts, setPosts] = useState<any[]>([]); // Здесь будут храниться записи
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          'https://www.google.com/localservices/prolist?spp=Cg0vZy8xMWZrd2N3Yl9s&scp=Ch1nY2lkOmFwcGxpYW5jZV9yZXBhaXJfc2VydmljZRon0YDQtdC80L7QvdGCINGF0L7Qu9C-0LTQuNC70YzQvdC40LrQvtCyIjrRgNC10LzQvtC90YIg0YXQvtC70L7QtNC40LvRjNC90LjQutC-0LIg0YfQtdC70Y_QsdC40L3RgdC6KifRgNC10LzQvtC90YIg0YXQvtC70L7QtNC40LvRjNC90LjQutC-0LI%3D&src=2&slp=UhUIARIREg8iDS9nLzExZmt3Y3diX2w#ts=3'
-        );
+    const accessToken = 'YOUR_ACCESS_TOKEN'; // Ваш токен доступа ВКонтакте
+    const groupId = 'remholodchel'; // ID или короткое имя сообщества
 
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+    fetch(`https://api.vk.com/method/wall.get?domain=${groupId}&access_token=${accessToken}&v=5.131`)
+      .then(response => response.json())
+      .then(data => {
+        // Устанавливаем полученные записи в состояние
+        setPosts(data.response.items);
+      })
+      .catch(error => {
+        console.error('Ошибка:', error);
+      });
+  }, []); // Пустой массив зависимостей, чтобы useEffect выполнялся только один раз при монтировании компонента
 
-        const responseData = await response.json();
-        setData(responseData);
-      } catch (error: any) {
-        console.error('Error fetching data:', error.message);
-      }
-    };
-
-    fetchData();
-  }, []);
-console.log(data)
   return (
     <div className="recenze-page-container">
-      <h1>Recenze</h1>
-      {data && (
-        <div>
-          {/* Ваши действия с данными здесь, например, отображение данных */}
-          <pre>{JSON.stringify(data, null, 2)}</pre>
+      {/* Выводим записи на странице */}
+      {posts.map(post => (
+        <div key={post.id}>
+          <h3>{post.text}</h3>
+          {/* Другая информация о посте, которую можно отобразить */}
         </div>
-      )}
+      ))}
     </div>
   );
 };

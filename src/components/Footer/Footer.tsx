@@ -10,6 +10,16 @@ export default function Footer() {
             <p>asd</p>
             <p>asd</p>
             <p>asd</p>
+            <p>asd</p> <p>asd</p>
+            <p>asd</p>
+            <p>asd</p>
+            <p>asd</p>
+            <p>asd</p>
+            <p>asd</p> <p>asd</p>
+            <p>asd</p>
+            <p>asd</p>
+            <p>asd</p>
+            <p>asd</p>
             <p>asd</p>
         </footer>
     )
