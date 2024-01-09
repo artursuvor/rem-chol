@@ -3,29 +3,18 @@ import { Link, NavLink } from "react-router-dom";
 import './Header.css';
 
 const Header: React.FC = () => {
-    const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+    const [isSticky, setSticky] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
-          const offset = window.scrollY;
-          const header = document.querySelector('header');
-          if (header) {
-            if (offset > 115 && !isHeaderFixed) {
-              setIsHeaderFixed(true);
-              header.classList.remove('hidden');
-            } else if (offset <= 115 && isHeaderFixed) {
-              setIsHeaderFixed(false);
-              header.classList.add('hidden');
-            }
-          }
-        };
-      
-        window.addEventListener('scroll', handleScroll);
-      
+            setSticky(window.scrollY > 110)
+        }
+
+        window.addEventListener('scroll', handleScroll)
         return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, [isHeaderFixed]);      
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])     
     
     const phoneImage = document.getElementById('phoneImage') as HTMLImageElement | null;
     if (phoneImage) {
@@ -34,7 +23,7 @@ const Header: React.FC = () => {
         });
     }
     return (
-        <header className={isHeaderFixed ? 'fixed-header' : ''}>
+        <header className={isSticky  ? 'sticky-header' : ''}>
             <Link className="site-logo" to="/" target="_blank" rel="noopener noreferrer">
                 <img src="./img/logo.png" alt="Logo" />
             </Link>
@@ -74,8 +63,12 @@ const Header: React.FC = () => {
                 </NavLink>
             </nav>
             <Link className="vk-logo" to="https://vk.com/widget_community.php?act=a_subscribe_box&oid=-219907410&state=1" target="_blank" rel="noopener noreferrer">
-                <img src="./img/vk.png" alt="Logo" />
+                <div className="vk-content">
+                    <img src="./img/vk.png" alt="VK Logo" />
+                    <span className="discount-text">Подписчикам скидка</span>
+                </div>
             </Link>
+
         </header>
     );  
 };

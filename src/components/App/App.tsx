@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import './App.css';
 import Layout from '../Layout/Layout';
 import Home from '../../pages/Home/Home';
 import About from '../../pages/About/About';
-import Contacts from '../../pages/Contacts';
+import Contacts from '../../pages/Contacts/Contacts';
 import Recenze from '../../pages/Recenze';
-import RepairingWash from '../../pages/RepairingWash/ремонт-стиральных-машин';
-import RepairingRef from '../../pages/RepairingRef/ремонт-холодильников';
+import RepairingWash from '../../pages/Repairing/ремонт-стиральных-машин';
+import RepairingRef from '../../pages/Repairing/ремонт-холодильников';
+import './App.css';
 
 function App(): JSX.Element {
   return (

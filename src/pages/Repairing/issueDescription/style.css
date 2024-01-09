@@ -1,0 +1,20 @@
+div {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+div p {
+    margin-bottom: 15px;
+  }
+  
+div ul {
+    margin-bottom: 15px;
+    margin-left: 20px;
+  }
+  
+div li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+  }
+  

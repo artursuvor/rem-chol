@@ -1,6 +1,6 @@
 import React from 'react';
-import './Home.css'; 
 import { NavLink } from "react-router-dom";
+import './Home.css'; 
 
 const Home: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Home: React.FC = () => {
         <div className="image-with-text">
           <NavLink to="/ремонт-холодильников">
             <img
-              src="./img/refrigerator.jpg"
+              src="./img/fridge.jpg"
               alt="Repairing refrigerators"
               className="image-left"
             />

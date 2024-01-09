@@ -1,0 +1,114 @@
+.about-page-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #333;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.vk-discount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vk-discount p {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.vk-discount img {
+  padding: 3px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.vk-discount img:hover {
+  transform: scale(1.1);
+}
+
+.photos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+}
+
+.main-photo-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-photo {
+  max-width: 70%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-button {
+  position: absolute;
+  top: 45%;
+  padding: 20px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.custom-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.additional-photos {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.additional-photo {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  border: 2px solid transparent;
+  border-radius: 50%;
+}
+
+.additional-photo.active {
+  border-color: #007bff;
+  transform: scale(1.1);
+}
+
+.additional-photo:hover {
+  transform: scale(1.1);
+}
