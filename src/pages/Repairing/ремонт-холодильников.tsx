@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Issue, issues } from './issuesDataRef'; 
 import './Repair.css';
-import './issueDescription/style.css';
 
 const IssuesList: React.FC = () => {
   const [selectedIssue, setSelectedIssue] = useState<Issue | null>(null);
@@ -33,6 +32,14 @@ const IssuesList: React.FC = () => {
           {selectedIssue.description()}
         </div>
       )}
+      <div className='warning-container'>
+        <p> 
+            Если вы не уверены в своих навыках или не обладаете необходимыми инструментами для самостоятельного ремонта, рекомендуем обратиться к профессиональному мастеру. 
+            Несправильные попытки самостоятельного ремонта могут привести к дополнительным проблемам и неудачам.
+            Как частный мастер, я готов предоставить вам профессиональные услуги по ремонту холодильников и стиральных машин. Обращайтесь для консультации и оценки неисправностей.
+            Не стесняйтесь связаться со мной для получения дополнительной информации и доверьтесь опыту частного мастера.
+        </p>
+      </div>
     </div>
   );
 };

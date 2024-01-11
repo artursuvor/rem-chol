@@ -1,7 +1,7 @@
 .issue-container {
     width: 100%;
     margin: 0 auto;
-    text-align: center;
+    text-align: center; 
     padding: 20px;
     max-width: 1350px;
   }
@@ -40,9 +40,64 @@
     margin-top: 20px;
     border: 1px solid #ccc;
   }
-
-  .selected-issue div {
+  
+  .selected-issue-description {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
     padding: 5px 20px 5px 20px;
     text-align: left;
   }
   
+.selected-issue-description p {
+    margin-bottom: 15px;
+  }
+  
+.selected-issue-description ul {
+    margin-bottom: 15px;
+    margin-left: 20px;
+  }
+  
+.selected-issue-description li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+  }
+
+.selected-issue-description a,
+.selected-issue-description p {
+    display: inline;
+    margin: 0;
+    margin-left: 8px;  
+  }
+
+.selected-issue-description a {
+    color: #007bff;
+    text-decoration: none;
+    border-bottom: 1px solid #007bff;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+  
+.selected-issue-description a:hover {
+    border-bottom: 1px solid transparent;
+  }
+
+#problem-photo{
+  padding: 100px;
+}
+
+.warning-container {
+  background-color: #FCD9D9; 
+  border: 1px solid #e57373; 
+  max-width: 600px;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.warning-container p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+

@@ -1,4 +1,36 @@
-footer{
+footer {
     background-color: bisque;
     height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 35px 25px 35px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+footer p,
+footer a {
+    margin: 0;
+}
+
+footer p {
+    padding: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #555;
 }

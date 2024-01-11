@@ -2,7 +2,7 @@ import React from 'react';
 
 const NeOtravaetsyaDver = () => {
   return (
-    <div className="door-not-opening">
+    <div className='selected-issue-description'>
       <p>
         Если дверь стиральной машины не открывается, вот несколько шагов для попытки решения этой проблемы:
         <ul>
@@ -14,6 +14,7 @@ const NeOtravaetsyaDver = () => {
         </ul>
         Если ничто из вышеперечисленного не помогает, лучше всего обратиться к профессиональному технику, чтобы избежать повреждения машины или замены неисправных деталей.
       </p>
+      <a href="tel:+79823435703">8 (982) 343-57-03</a>
     </div>
   );
 };

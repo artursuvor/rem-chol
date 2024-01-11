@@ -4,10 +4,9 @@ import Layout from '../Layout/Layout';
 import Home from '../../pages/Home/Home';
 import About from '../../pages/About/About';
 import Contacts from '../../pages/Contacts/Contacts';
-import Recenze from '../../pages/Recenze';
+import Recenze from '../../pages/Recenze/Recenze';
 import RepairingWash from '../../pages/Repairing/ремонт-стиральных-машин';
 import RepairingRef from '../../pages/Repairing/ремонт-холодильников';
-import './App.css';
 
 function App(): JSX.Element {
   return (

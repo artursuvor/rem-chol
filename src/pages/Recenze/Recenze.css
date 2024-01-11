@@ -1,0 +1,38 @@
+.recenze-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.recenze-container p {
+    margin-bottom: 15px;    
+}
+
+.recenze-container a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.recenze-container a:hover {
+    background-color: #0056b3;
+}
+
+
+.recenze-container div{
+    padding: 20px;
+}
+
+  

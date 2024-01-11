@@ -2,7 +2,7 @@ import React from 'react';
 
 const NeSlivaetVodu = () => {
   return (
-    <div className="water-not-draining">
+    <div className='selected-issue-description'>
       <p>
         Проблемы со сливом воды в стиральной машине могут быть вызваны различными факторами:
         <ul>
@@ -14,6 +14,7 @@ const NeSlivaetVodu = () => {
         </ul>
         Если проблема не решается простыми методами, лучше всего обратиться к специалисту для более точной диагностики и ремонта.
       </p>
+      <a href="tel:+79823435703">8 (982) 343-57-03</a>
     </div>
   );
 };

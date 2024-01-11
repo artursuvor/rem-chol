@@ -49,8 +49,9 @@ const Contacts: React.FC = () => {
       <div id="map" className="map-container"></div>
       <div className="contact-info">
         <h2>Contact Information</h2>
-        <p>Email: example@email.com</p>
-        <p>Phone: +1234567890</p>
+        <p>Email: artemsuvor@gmail.com</p>
+        <br />
+        <p>Телефон: <a href="tel:+79823435703">8 (982) 343-57-03</a></p>
       </div>
     </div>
   );
