@@ -1,0 +1,38 @@
+.image-text-mobile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 0 0 5px black;
+    text-align: center;
+}
+
+.custom-button-mobile {
+    position: absolute;
+    top: 45%;
+    padding: 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .prev-mobile {
+    left: 5px;
+  }
+  
+  .next-mobile {
+    right: 5px;
+  }
+  
+  .custom-button-mobile:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  

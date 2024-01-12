@@ -48,13 +48,6 @@ const Header: React.FC = () => {
                     ОБО МНЕ
                 </NavLink>
                 <NavLink 
-                    to="/контакты" 
-                    className={({ isActive, isPending }) =>
-                        isPending ? "contacts" : isActive ? "contacts-active" : ""
-                    }>
-                    КОНТАКТЫ
-                </NavLink>
-                <NavLink 
                     to="/отзывы" 
                     className={({ isActive, isPending }) =>
                         isPending ? "contacts" : isActive ? "contacts-active" : ""
