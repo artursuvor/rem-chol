@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from '../Layout/Layout';
 import LayoutMobile from '../Layout/LayoutMobile';
 import Home from '../../pages/Home/Home';

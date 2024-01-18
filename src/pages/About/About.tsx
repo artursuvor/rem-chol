@@ -34,7 +34,7 @@ const About: React.FC = () => {
       <div className="vk-discount">
         <p>🌟 Подписчикам группы ВКОНТАКТЕ полагается скидка. </p>
         <Link to="https://vk.com/remholodchel" target="_blank" rel="noopener noreferrer">
-          <img src="./img/vk.png" alt="Logo" />
+          <img src="./img/vk.png" alt="VK Logo" />
         </Link>
       </div>
       <div className="photos-container">
@@ -44,7 +44,7 @@ const About: React.FC = () => {
           </button>
           <img
             src={photos[currentPhotoIndex]}
-            alt={`photo${currentPhotoIndex}`}
+            alt={`Main Photo`}
             className="main-photo"
           />
           <button className="custom-button next" onClick={handleNextPhoto}>
@@ -56,7 +56,7 @@ const About: React.FC = () => {
             <img
               key={index}
               src={photo}
-              alt={`photo${index}`}
+              alt={`Additional Photo ${index + 1}`}
               className={`additional-photo ${currentPhotoIndex === index ? 'active' : ''}`}
               onClick={() => setCurrentPhotoIndex(index)}
             />

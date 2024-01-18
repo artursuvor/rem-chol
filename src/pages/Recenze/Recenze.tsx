@@ -39,7 +39,7 @@ const Recenze: React.FC = () => {
       <p>
         Все отзывы вы можете посмотреть в моей группе 
       </p>
-      <a href="https://vk.com/remholodchel" target="_blank">ВКОНТАКТЕ</a>
+      <a href="https://vk.com/remholodchel" target="_blank" rel="noreferrer">ВКОНТАКТЕ</a>
       <div id="vk_post_-219907410_19"></div>
       <div id="vk_post_-219907410_17"></div>
       <div id="vk_post_-219907410_16"></div>
