@@ -67,7 +67,7 @@ const Home: React.FC = () => {
                 </button>
                 <img
                     src={photos[currentPhotoIndex]}
-                    alt={`photo${currentPhotoIndex}`}
+                    alt={`ph${currentPhotoIndex}`}
                     className="main-photo"
                 />
                 <button className="custom-button-mobile next-mobile" onClick={handleNextPhoto}>
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
                     <img
                     key={index}
                     src={photo}
-                    alt={`photo${index}`}
+                    alt={`ph${index}`}
                     className={`additional-photo ${currentPhotoIndex === index ? 'active' : ''}`}
                     onClick={() => setCurrentPhotoIndex(index)}
                     />
@@ -92,7 +92,7 @@ const Home: React.FC = () => {
             <p>
                 Все отзывы вы можете посмотреть в моей группе 
             </p>
-            <a href="https://vk.com/remholodchel" target="_blank">ВКОНТАКТЕ</a>
+            <a href="https://vk.com/remholodchel" target="_blank" rel="noreferrer">ВКОНТАКТЕ</a>
         </div>
     </div>
   );

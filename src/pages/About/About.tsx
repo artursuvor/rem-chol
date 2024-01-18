@@ -44,7 +44,7 @@ const About: React.FC = () => {
           </button>
           <img
             src={photos[currentPhotoIndex]}
-            alt={`Main Photo`}
+            alt={`Main Ph`}
             className="main-photo"
           />
           <button className="custom-button next" onClick={handleNextPhoto}>
@@ -56,7 +56,7 @@ const About: React.FC = () => {
             <img
               key={index}
               src={photo}
-              alt={`Additional Photo ${index + 1}`}
+              alt={`Additional Ph ${index + 1}`}
               className={`additional-photo ${currentPhotoIndex === index ? 'active' : ''}`}
               onClick={() => setCurrentPhotoIndex(index)}
             />
