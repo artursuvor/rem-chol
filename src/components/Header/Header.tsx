@@ -1,9 +1,10 @@
-declare const yaCounter96168741: {
-    reachGoal: (goal: string) => void;
-};
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import './Header.css';
+
+declare const yaCounter96168741: {
+    reachGoal: (goal: string) => void;
+};
 
 const Header: React.FC = () => {
     const [isSticky, setSticky] = useState(false);
