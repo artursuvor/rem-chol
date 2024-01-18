@@ -1,38 +1,46 @@
-import React, { useState, useEffect }  from "react";
+declare const yaCounter96168741: {
+    reachGoal: (goal: string) => void;
+};
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import './Header.css';
 
 const Header: React.FC = () => {
-    const [isSticky, setSticky] = useState(false)
+    const [isSticky, setSticky] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            setSticky(window.scrollY > 110)
-        }
+            setSticky(window.scrollY > 110);
+        };
 
-        window.addEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    useEffect(() => {
+        const phoneImage = document.getElementById('phoneImage') as HTMLImageElement | null;
+        if (phoneImage) {
+            phoneImage.addEventListener('click', () => {
+                window.location.href = 'tel:+79823435703';
+                yaCounter96168741?.reachGoal('test'); 
+            });
         }
-    }, [])     
-    
-    const phoneImage = document.getElementById('phoneImage') as HTMLImageElement | null;
-    if (phoneImage) {
-        phoneImage.addEventListener('click', () => {
-            window.location.href = 'tel:+79823435703';
-        });
-    }
+    }, []); 
+
     return (
-        <header className={isSticky  ? 'sticky-header' : ''}>
+        <header className={isSticky ? 'sticky-header' : ''}>
             <Link className="site-logo" to="/" target="_blank" rel="noopener noreferrer">
                 <img src="./img/logo.png" alt="Logo" />
             </Link>
             <div className="telephone-container">
-                <a href="tel:+79823435703">8 (982) 343-57-03</a>
-                <img src="./img/tel.png" alt="Telephone" id="phoneImage"/>
+                <a href="tel:+79823435703" onClick={() => { yaCounter96168741?.reachGoal('test'); return true; }}>
+                    8 (982) 343-57-03
+                </a>
+                <img src="./img/tel.png" alt="Telephone" id="phoneImage" />
             </div>
             <nav>
-                
                 <NavLink 
                     to="/" 
                     className={({ isActive, isPending }) =>
